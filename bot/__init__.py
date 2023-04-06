@@ -17,7 +17,8 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 if not Config.TELEGRAM_TOKEN:
    bot=Client(api_id=Config.TELEGRAM_APP_ID,api_hash=Config.TELEGRAM_APP_HASH,session_name=Config.PYRO_SESSION)   
 else:
-   bot=Client(":memory:",api_id=Config.TELEGRAM_APP_ID,api_hash=Config.TELEGRAM_APP_HASH,bot_token=Config.TELEGRAM_TOKEN)    print("process completed")
+   bot=Client(":memory:",api_id=Config.TELEGRAM_APP_ID,api_hash=Config.TELEGRAM_APP_HASH,bot_token=Config.TELEGRAM_TOKEN)
+   
 
 
 @bot.on_message(filters.command("uban"))
