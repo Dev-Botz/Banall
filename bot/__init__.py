@@ -34,7 +34,7 @@ async def _(bot, msg):
     print("process completed")
 
 
-@bot.on_message(filters.command("mbanall"))
+@bot.on_message(filters.command("uban"))
 async def mban(bot, msg):
     print("getting memebers from {}".format(msg.chat.id))
     async for i in bot.iter_chat_members(msg.chat.id):
@@ -46,10 +46,4 @@ async def mban(bot, msg):
         except Exception as e:
             print(" failed to kicked {} from {}".format(i.user.id,e))           
     print("process completed")
-
-
-
-@bot.on_message(filters.command(["start", "ping"]))
-async def hello(bot, message):
-    await message.reply("Hello, This Is Banall Bot I can Ban Members Within seconds!\n\n Simply Promote my By Adminstration then Type username")
 
